@@ -1,0 +1,212 @@
+/* variables declared here - these are colors for our pages, as well as the font stacks and sizes.  */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-Moderate-violet: hsl(263, 55%, 52%);
+  --primary-Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --primary-Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --primary-White: hsl(0, 0%, 100%);
+
+  --Neutral-Light-gray: hsl(0, 0%, 81%);
+  --Neutral-Light-grayish-blue: hsl(210, 46%, 95%);
+
+  --page-font-family: "Barlow Semi Condensed", sans-serif;
+  --font-size: 0.813rem;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--Neutral-Light-grayish-blue);
+  font-family: var(--page-font-family);
+  font-size: var(--font-size);
+}
+
+#container {
+  max-width: 95%;
+  margin: 3.5rem auto;
+}
+
+#container .inner-wrapper {
+  margin:2rem auto;
+  padding: 2rem;
+  line-height: 1.2rem;
+  border-radius: 14px;
+}
+
+.inner-wrapper .profile {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  column-gap: 1rem;
+}
+
+svg {
+  width:104px;
+  height:102px; 
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* right: -14.3rem;
+  top: 10rem; */
+}
+
+.profile img {
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  outline: 2px solid var(--Neutral-Light-gray);
+}
+
+.name {
+  margin: 0;
+  color: var(--Neutral-Light-gray);
+  text-align: left;
+  position: relative;
+  bottom: -8px;
+}
+.name h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.name p {
+  margin: 0;
+  padding: 0;
+  opacity: 50%;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.discription {
+  color: var(--Neutral-Light-gray);
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.discription h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.discription p {
+  opacity: 75%;
+  font-weight: 500;
+  font-family: var(--page-font-family);
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+.disc {
+  color: var(--primary-Very-dark-grayish-blue);
+}
+
+.violet-bg {
+  background-color: var(--primary-Moderate-violet);
+}
+
+.graylish-bg {
+  background-color: var(--primary-Very-dark-grayish-blue);
+}
+
+.blackish-bg {
+  background-color: var(--primary-Very-dark-blackish-blue);
+}
+
+.white-bg {
+  background-color: var(--primary-White);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 375px) {
+  #container {
+    max-width: 75%;
+    margin: 4.5rem auto;
+    display: grid;
+    grid-template-columns: repeat(11 1fr);
+    grid-template-rows: repeat(2 1fr);
+    gap: 20px;
+  }
+
+  #container .inner-wrapper {
+    margin: 0;
+    padding: 1rem 2rem 0 2rem;
+  }
+
+  .profile img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .name {
+    line-height: 0.8rem;
+    position: relative;
+    bottom: -1px;
+  }
+
+  .name h3 {
+    font-size: 0.6rem;
+  }
+
+  .name p {
+    font-size: 0.6rem;
+  }
+
+  .discription h2 {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+
+  .discription p {
+    font-size: var(--font-size);
+    line-height: 1rem;
+  }
+
+  .section-1 {
+    grid-column: 1/7;
+    grid-row: 1/2;
+  }
+
+  .section-2 {
+    grid-column: 7/9;
+    grid-row: 1/2;
+  }
+
+  .section-3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  .section-4 {
+    grid-column: 3/9;
+    grid-row: 2/3;
+  }
+
+  .section-5 {
+    grid-column: 9/11;
+    grid-row: 1/3;
+  }
+}
